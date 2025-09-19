@@ -21,7 +21,10 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <div class="decorative-element visually-hidden"></div>
+      <div aria-hidden="true" class="decorative-elements-group">
+        <div class="REC-element">REC</div>
+        <div class="decorative-point"></div>
+      </div>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -48,7 +51,7 @@
           </li>
         </ul>
       </nav>
-      <h1 class="header__title decorative-text">
+      <h1 class="header__title header-decorative-text">
         no focus
       </h1>
       <p class="header__paragraph accent-bg">
@@ -62,7 +65,7 @@
         <li class="reasons__list">
           <ul class="reasons__list-item">
             <h2 class="list-item-header accent-bg">Многозадачность</h2>
-            <p class="list-item-paragraph accent-text">Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <!-- <span class="accent-text">выяснили<a class="accent-link">выяснили</a></span> -->, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
+            <p class="list-item-paragraph accent-text">Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <a href="https://dana.org/news-and-insights/" class="accent-link">выяснили</a>, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.</p>
           </ul>
           <ul class="reasons__list-item">
             <h2 class="list-item-header accent-bg">Дофамин</h2>
@@ -103,7 +106,7 @@
           </ul>
           <ul class="advice__list-item">
             <h3 class="list-item-header accent-bg-regular">Прогуляйтесь</h3>
-            <p class="list-item-paragraph accent-text">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент показал, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
+            <p class="list-item-paragraph accent-text">Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" class="accent-link">показал</a>, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.</p>
           </ul>
           <ul class="advice__list-item">
             <h3 class="list-item-header accent-bg-regular">Хорошо ешьте</h3>
@@ -119,16 +122,16 @@
       <section class="gallery">
         <h1 class="gallery__header accent-bg">А можно в картинках?</h1>
         <div class="gallery__list">
-          <img class="gallery__list-item" loading="lazy" src="./images/sunset.png" alt="Картинка заката">
-          <img class="gallery__list-item" loading="lazy" src="./images/ice-cream.png" alt="Картинка улыбающихся шариков мороженого в миске для мороженого">
-          <img class="gallery__list-item" loading="lazy" src="./images/tape.png" alt="Картинка касеты">
-          <img class="gallery__list-item" loading="lazy" src="./images/books.png" alt="Картинка стобки книг и чашки кофе стоящей сверху">
-          <img class="gallery__list-item" loading="lazy" src="./images/street.png" alt="Картинка улицы">
+          <img class="gallery__list-item sunset-img" loading="lazy" src="./images/sunset.png" alt="Картинка заката">
+          <img class="gallery__list-item ice-cream-img" loading="lazy" src="./images/ice-cream.png" alt="Картинка улыбающихся шариков мороженого в миске для мороженого">
+          <img class="gallery__list-item tape-img" loading="lazy" src="./images/tape.png" alt="Картинка касеты">
+          <img class="gallery__list-item books-img" loading="lazy" src="./images/books.png" alt="Картинка стобки книг и чашки кофе стоящей сверху">
+          <img class="gallery__list-item street-img" loading="lazy" src="./images/street.png" alt="Картинка улицы">
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <h1 class="footer__header decorative-text">focus</h1>
+    <footer class="footer decorated-zone">
+      <h1 class="footer__header footer-decorative-text">focus</h1>
     </footer>
   </body>
 </html>

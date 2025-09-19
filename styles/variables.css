@@ -6,7 +6,7 @@
   --main-bg-image: url('../images/cover-image.png');
   --header-bg-image: url('../images/cover-image-dark.png');
   --accent-color: #FF0070;
-  --accent-color-hover: #FF0070 / 0.4;
+  --accent-color-hover: rgba(255, 0, 112, 0.6);
   --main-bg-color: #000028;
   --header-text-color: #000028;
   --main-text-color: #F1B2CE;
@@ -14,7 +14,7 @@
   --main-font: 'IBM Plex mono';
   --decorative-text-color: #DB00FF;
   --title-text-color: #FF0070;
-  /*--accent-text-color: #F1B2CE;
-  --accent-link-color: #FF0070; */
+  --accent-text-color: #F1B2CE;
+  --decorative-gap: 10px;
 
 }
