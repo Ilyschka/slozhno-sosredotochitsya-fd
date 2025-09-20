@@ -3,18 +3,17 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-bg-image: url('../images/cover-image.png');
-  --header-bg-image: url('../images/cover-image-dark.png');
-  --accent-color: #FF0070;
+  --main-bg-image: url("../images/cover-image.png");
+  --header-bg-image: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
   --accent-color-hover: rgba(255, 0, 112, 0.6);
   --main-bg-color: #000028;
   --header-text-color: #000028;
-  --main-text-color: #F1B2CE;
+  --main-text-color: #f1b2ce;
   --gallery-img-gap: 10px;
-  --main-font: 'IBM Plex mono';
-  --decorative-text-color: #DB00FF;
-  --title-text-color: #FF0070;
-  --accent-text-color: #F1B2CE;
+  --main-font: "IBM Plex mono";
+  --decorative-text-color: #db00ff;
+  --title-text-color: #ff0070;
+  --accent-text-color: #f1b2ce;
   --decorative-gap: 10px;
-
 }
