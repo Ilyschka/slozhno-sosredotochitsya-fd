@@ -9,14 +9,46 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --header-bg-image: url("../images/cover-image-light.png");
-  --accent-color: #ff8dcb;
+
+  --bg-image: url("../images/cover-image-light.png");
+  --accent-color-hover: #32312d66;
+  --button-and-dec-zon-color: #353430;
   --main-bg-color: #fff1f7;
+  --dec-color: #ffc2e6;
+  --title-text-color: #353430;
   --header-text-color: #353430;
   --main-text-color: #353430;
-  --decorative-text-color: #ffc2e6;
-  --link-color: #353430;
-  --accent-text-color: #353430;
-  --accent-link-color: #f1b2ce;
+  --accent-color: #ff8dcb;
+  --main-font: "IBM Plex mono";
+
+  .decorative-elements-group,
+  .decorative-elements-group::after {
+    display: none;
+  }
+
+  .decorated-zone::after,
+  .decorated-zone::before {
+    display: none;
+  } /*привет, кто проеверять будет, я понимаю что это не ваша работа
+  подсказывать правильные решения но пожалуйста модешь сказать как все же
+  убрать это углоки в header типо я уже все перепробовал оно либо из полностью
+  убирает либо я не знаю как, пожалуйста подскажи */
+}
+
+@media (prefers-color-scheme: light) {
+  --bg-image: url("../images/cover-image-light.png");
+  --accent-color-hover: #32312d66;
+  --button-and-dec-zon-color: #353430;
+  --main-bg-color: #fff1f7;
+  --dec-color: #ffc2e6;
   --title-text-color: #353430;
+  --header-text-color: #353430;
+  --main-text-color: #353430;
+  --accent-color: #ff8dcb;
+  --main-font: "IBM Plex mono";
+
+  .decorative-elements-group,
+  .decorative-elements-group::after {
+    display: none;
+  }
 }

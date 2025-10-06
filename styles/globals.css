@@ -22,6 +22,10 @@ p {
   margin: 0;
 }
 
+p {
+  gap: 10px;
+}
+
 ul {
   margin: 0;
   padding: 0;

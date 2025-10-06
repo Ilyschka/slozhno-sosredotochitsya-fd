@@ -2,49 +2,45 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-image: var(--main-bg-image);
+  background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
   min-width: 375px;
+  background-color: var(--main-bg-color);
 }
 
 /*header - decorative element*/
 header {
   position: relative;
   padding: 0 10px 0 10px;
-  background-image: var(--header-bg-image);
   background-size: cover;
   background-position: center;
   min-width: 375px;
-  height: 668px;
-  overflow: hidden;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
+  min-block-size: 668px;
 }
 
+/*decorative rec*/
 .decorative-elements-group {
-  display: flex;
   position: absolute;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  top: 10px;
-  right: 20px;
-}
-
-.REC-element {
-  display: block;
-  font-family: var(--main-font, sans-serif);
+  top: 13px;
+  right: 38px;
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   font-weight: 400;
   color: var(--accent-color, #ff0070);
 }
 
-.decorative-point {
-  align-self: center;
+.decorative-elements-group::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -19px;
   display: block;
   inline-size: 9px;
   block-size: 9px;
@@ -52,7 +48,9 @@ header {
   background-color: var(--accent-color);
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
+/**/
 
+/*декоративная зона */
 .decorated-zone {
   position: relative;
 }
@@ -65,8 +63,8 @@ header {
   display: block;
   width: 25px;
   height: 25px;
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
-  border-block-start: 1px solid var(--accent-color, #ff0070);
+  border-inline-end: 1px solid var(--button-and-dec-zon-color, #ff0070);
+  border-block-start: 1px solid var(--button-and-dec-zon-color, #ff0070);
 }
 
 .decorated-zone::after {
@@ -78,26 +76,24 @@ header {
   display: block;
   width: 25px;
   height: 25px;
-  border-inline-start: 1px solid var(--accent-color, #ff0070);
-  border-block-end: 1px solid var(--accent-color, #ff0070);
+  border-inline-start: 1px solid var(--button-and-dec-zon-color, #ff0070);
+  border-block-end: 1px solid var(--button-and-dec-zon-color, #ff0070);
 }
 
-/*page - decorative element*/
+/**/
 
 .header__theme-menu {
   margin-top: 75px;
   justify-self: right;
   align-self: start;
-  inline-size: 70px;
-  block-size: 98px;
 }
 
 .header-decorative-text {
   justify-self: start;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  color: var(--decorative-text-color, #db00ff);
+  color: var(--dec-color, #db00ff);
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
   line-height: 83%;
 }
@@ -117,8 +113,8 @@ header {
   block-size: 26px;
   text-align: center;
   font-size: 18px;
-  font-family: var(--main-font, sans-serif);
-  color: var(--accent-color);
+  font-family: var(--main-font, monospace);
+  color: var(--button-and-dec-zon-color);
   line-height: 18px;
   background-color: transparent;
   border: none;
@@ -130,20 +126,22 @@ header {
 }
 
 .header__theme-menu-button:focus {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid currentColor;
   outline: none;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--button-and-dec-zon-color);
+  pointer-events: none;
 }
+
+/*header*/
 
 .header__title {
   margin-top: 21px;
   justify-self: left;
   align-self: center;
   inline-size: 100%;
-  min-block-size: 192px;
   margin-bottom: 20px;
 }
 
@@ -152,13 +150,13 @@ header {
   justify-self: right;
   align-self: end;
   inline-size: 355px;
-  block-size: 117px;
 }
+/**/
 
-/* 3 main selectors*/
+/*тут стили на текст */
 
 .color-text {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-size: 18px;
   font-weight: 700;
   color: var(--title-text-color);
@@ -167,7 +165,7 @@ header {
 .accent-bg {
   display: inline-block;
   font-weight: 700;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-size: 18px;
   color: var(--header-text-color, #000028);
   line-height: 23.4px;
@@ -177,7 +175,7 @@ header {
 .accent-bg-regular {
   display: inline-block;
   font-weight: 400;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-size: 18px;
   color: var(--header-text-color, #000028);
   line-height: 23.4px;
@@ -185,7 +183,7 @@ header {
 }
 
 .accent-text {
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -197,6 +195,9 @@ header {
   display: block;
 }
 
+/**/
+
+/*link styles*/
 .accent-link {
   cursor: pointer;
   text-decoration: none;
@@ -204,36 +205,44 @@ header {
 }
 
 .accent-link:hover {
-  border: 1px solid var(--accent-color-hover);
+  border-bottom: 1px solid currentColor;
 }
 
 .accent-link:focus {
   outline: none;
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid currentColor;
 }
 
-/* 3 main selectors*/
+/**/
 
-main {
-  background-color: var(--main-bg-color, #000028);
-}
-
-/* reasons*/
-.reasons {
-  padding: 40px 10px 50px 10px;
+/*content-section/content-section-list*/
+.content-section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 20px;
 }
 
-.reasons__list {
+.content-section__list {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fill, 1fr);
   gap: 20px;
 }
+/**/
+
 /* reasons*/
+.reasons {
+  padding: 40px 10px 50px 10px;
+}
+/* reasons*/
+
+/*advice*/
+.advice {
+  padding: 0 10px 50px 10px;
+}
+
+/*advice*/
 
 /*aspects*/
 .aspects {
@@ -252,23 +261,6 @@ main {
 }
 /*aspects*/
 
-/*advice*/
-.advice {
-  padding: 0 10px 50px 10px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 20px;
-}
-
-.advice__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fill, 1fr);
-  gap: 20px;
-}
-/*advice*/
-
 /*gallery*/
 
 .gallery {
@@ -283,7 +275,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fill, 1fr);
-  gap: var(--gallery-img-gap);
+  gap: 10px;
 }
 
 .gallery__list-item {
@@ -293,10 +285,6 @@ main {
   object-position: center;
 }
 
-/*.list-item-header {
-  margin-block-end: 10px;
-}*/
-
 /*gallery*/
 
 /* footer*/
@@ -305,8 +293,8 @@ main {
   align-items: center;
   justify-content: center;
   min-inline-size: 100%;
-  background-color: var(--main-bg-color);
-  block-size: 668px;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer__header {
@@ -317,10 +305,10 @@ main {
 
 .footer-decorative-text {
   justify-self: start;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
-  color: var(--decorative-text-color, #db00ff);
+  color: var(--dec-color, #db00ff);
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
   line-height: 83%;
 }
@@ -344,17 +332,15 @@ main {
 
   .decorative-elements-group {
     top: 20px;
-    right: 30px;
+    right: 48px;
+  }
+
+  .decorative-elements-group::after {
+    top: 8px;
   }
 
   .header {
-    block-size: 1024px;
     padding: 0 20px 0 20px;
-  }
-
-  .decorative-elements-group {
-    top: 20px;
-    right: 30px;
   }
 
   .header__paragraph {
@@ -363,7 +349,7 @@ main {
   }
 
   .header__title {
-    margin-top: 120px;
+    margin-top: 20px;
     margin-left: -20px;
   }
 
@@ -371,8 +357,11 @@ main {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .reasons {
+  .content-section {
     grid-template-columns: 1fr 2fr;
+  }
+
+  .reasons {
     padding: 60px 20px 80px 20px;
   }
 
@@ -380,7 +369,6 @@ main {
     padding: 0 20px 80px 20px;
   }
   .advice {
-    grid-template-columns: 1fr 2fr;
     padding: 0 20px 80px 20px;
   }
 
@@ -391,10 +379,8 @@ main {
 
   .gallery__list {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 780px;
-    --gallery-img-gap: 20px;
-    overflow: hidden;
+    grid-template-rows: auto;
+    gap: 20px;
   }
 
   .sunset-img {
@@ -409,7 +395,7 @@ main {
 
   .tape-img {
     grid-column: 1;
-    grid-row: 2 / 5;
+    grid-row: 2 / 4;
   }
 
   .books-img {
@@ -419,15 +405,11 @@ main {
 
   .street-img {
     grid-column: 2 / 4;
-    grid-row: 3 / 5;
+    grid-row: 3 / 4;
   }
 
   .aspects__header {
     width: 236px;
-  }
-
-  .footer {
-    block-size: 1025px;
   }
 
   .footer-decorative-text {
@@ -436,27 +418,21 @@ main {
 }
 
 @media (width >= 1024px) {
-  .header {
-    block-size: 768px;
-  }
-
   .header-decorative-text {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .header__theme-menu {
     margin-top: 20px;
-    margin-right: 160px;
     justify-self: center;
     align-self: start;
   }
 
   .header__title {
-    margin-bottom: 50px;
+    margin-top: 20px;
   }
   .header__paragraph {
     margin-bottom: 134px;
     inline-size: 491px;
-    block-size: 71px;
   }
 
   .header__theme-menu-list {
@@ -464,25 +440,44 @@ main {
     grid-template-rows: 1fr;
   }
 
+  .gallery__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    --gallery-img-gap: 20px;
+  }
+
+  .sunset-img {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .ice-cream-img {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .tape-img {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  .books-img {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .street-img {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+  }
+
   .aspects__header {
     inline-size: 315px;
   }
+
   .aspects__list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-  }
-
-  .decorative-elements-group {
-    top: 20px;
-    right: 30px;
-  }
-
-  .gallery__list {
-    block-size: 1048px;
-  }
-
-  .footer {
-    block-size: 768px;
   }
 
   .footer-decorative-text {
