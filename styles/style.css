@@ -190,12 +190,12 @@ header {
   color: var(--main-text-color, #f1b2ce);
 }
 
-.content-section__list-item {
+.list-item {
   display: block;
   margin-block-end: 10px;
 }
 
-.content-section__list-item:last-child {
+.list-item:last-child {
   margin-block-end: 0;
 }
 
